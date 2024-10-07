@@ -1,0 +1,325 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media screen and (max-width:640px){
+    body{
+        width: 100vw;
+    }
+}
+
+header{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+    "hand hand brun brun"
+    "hand hand bluegreen bluegreen";
+}
+.header--hand{
+    background-image: url(./assets/hand.jpeg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: auto;
+    grid-area: hand;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header--brown{
+    background-color: #9E6D52;
+    grid-area: brun;
+    display: flex;
+    justify-content: center;
+}
+.header--bluegreen{
+    background-color: #0A846E;
+    grid-area: bluegreen;
+    display: flex;
+    justify-content: center;
+}
+
+nav{
+    height: auto;
+    margin: 5%;
+    display: flex;
+    justify-content: space-around;
+}
+@media screen and (max-width:640px){
+    nav{
+        display: none;
+    }
+}
+.nav__link{
+    text-decoration: none;
+    color: black;
+}
+
+main{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.headline{
+    text-align: center;
+    font-family: monospace;
+    font-weight: 500;
+    font-size: 500%;
+    color: #0A846E;
+}
+
+.section__one{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    "round round så så"
+    "round round så så";
+}
+@media screen and (max-width:560px){
+    .section__one{
+        grid-template-areas: 
+        "så så"
+        "så så"
+        "round round"
+        "round round";
+    }
+}
+.one--round--bluegreen{
+    background-color: #0A846E;
+    border-radius: 50%;
+    grid-area: round;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.one--round--img{
+    width: auto;
+    height: 25vh;
+}
+.one--så{
+    height: auto;
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    grid-area: så;
+}
+.one--h2{
+    margin: 5%;
+    font-family: sans-serif;
+}
+.one--button{
+    width: 10vw;
+    height: 7vh;
+    align-self: flex-end;
+    margin: 5%;
+    background-color:#0A846E;
+    border-radius: 20%;
+    color: white;
+}
+
+.section__two--line{
+    width: 20vw;
+    height: 1vh;
+    background-color: #055647;
+    margin: 5%;
+}
+
+.section__three--cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "one two three"
+    "four five six"
+    ". button .";
+    place-items: center;
+    gap: 1rem;
+}
+@media screen and (max-width:640px) {
+    .section__three--cards{
+        grid-template-areas: 
+        "one two"
+        "three four"
+        "five six"
+        "button button";
+    }
+}
+.section__card--1{
+    grid-area: one;
+    border: solid 1px black;
+    padding: 2.5%;
+}
+.section__card--2{
+    grid-area: two;
+    border: solid 1px black;
+    padding: 2.5%;
+}
+.section__card--3{
+    grid-area: three;
+    border: solid 1px black;
+    padding: 2.5%;
+}
+.section__card--4{
+    grid-area: four;
+    border: solid 1px black;
+    padding: 2.5%;
+}
+.section__card--5{
+    grid-area: five;
+    border: solid 1px black;
+    padding: 2.5%;
+}
+.section__card--6{
+    grid-area: six;
+    border: solid 1px black;
+    padding: 2.5%;
+}
+.three--button{
+    grid-area: button;
+    background-color: #0A846E;
+    margin: 5%;
+    padding: 3%;
+    border-radius: 13%;
+    color: white;
+}
+.card--img{
+    width: 20vw;
+    height: 20vh;
+}
+.article--card{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    "h3 h3 p1 p1"
+    "p2 p2 button button";
+    gap: 5%;
+}
+.card--h3{
+    grid-area: h3;
+    font-size: 70%;
+
+}
+.card--p{
+    grid-area: p1;
+    font-size: 70%;
+}
+.card--p--opacity{
+    grid-area: p2;
+    opacity: 0.8;
+    font-size: 70%;
+}
+.card--button{
+    grid-area: button;
+    background-color: #9E5277;
+    border-radius: 20%;
+    color: white;
+}
+
+.section__four{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas: 
+    "article article round round"
+    "article article round round";
+    margin: 5%;
+}
+@media  screen and (max-width: 560px) {
+    .section__four{
+        grid-template-areas: 
+        "round round"
+        "round round"
+        "article article"
+        "article article";
+    }
+}
+.article__four{
+    grid-area: article;
+    margin-top: auto;
+}
+.four--h3{
+    margin: 5%;
+}
+.four--button{
+ background-color: #0A846E;
+ color: white;
+ margin: 5%;
+ padding: 3%;
+ border-radius: 15%;
+}
+.four--round--bluegreen{
+    background-color: #0A846E;
+    grid-area: round;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.four--round--img{
+    width: 25vw;
+    height: 25vh;
+}
+
+footer{
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas: 
+    "h3 h3 six six"
+    "five five six six"
+    "button button button button";
+    background-image: url(./assets/handandfield.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@media screen and (max-width: 640px){
+    footer{
+        grid-template-areas: 
+        "six six"
+        "six six"
+        "h3 h3"
+        "five five"
+        "button button";
+    }
+}
+.section__five{
+    grid-area: five;
+    padding: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
+}
+.footer--h3{
+    margin-top: 5%;
+    color: white;
+    font-size: 400%;
+    font-family: monospace;
+    margin-top: auto;
+    grid-area: h3;
+    text-align: center;
+    align-self: flex-end;
+}
+.footer--p{
+    color: white;
+}
+.section__six{
+    margin-top: 5%;
+    grid-area: six;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer--button{
+    grid-area: button;
+    padding: 3%;
+    position: sticky;
+}
+
