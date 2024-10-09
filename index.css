@@ -5,6 +5,8 @@
 }
 
 body{
+    margin-left: auto;
+    margin-right: auto;
     width: 50vw;
     height: 100vh;
     display: flex;
@@ -24,10 +26,18 @@ header{
     "hand hand brun brun"
     "hand hand bluegreen bluegreen";
 }
+@media screen and (max-width: 640px) {
+    header{
+        grid-template-areas: 
+        "hand hand hand hand"
+        "brun brun bluegreen bluegreen";
+    }
+}
 .header--hand{
     background-image: url(./assets/hand.jpeg);
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: center;
     height: auto;
     grid-area: hand;
     display: flex;
@@ -49,9 +59,10 @@ header{
 
 nav{
     height: auto;
+    width: 100%;
     margin: 5%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 @media screen and (max-width:640px){
     nav{
@@ -80,6 +91,7 @@ main{
 
 .section__one{
     display: grid;
+    align-items: center;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: 
     "round round så så"
@@ -87,6 +99,7 @@ main{
 }
 @media screen and (max-width:560px){
     .section__one{
+        grid-template-columns: repeat(2,1fr);
         grid-template-areas: 
         "så så"
         "så så"
@@ -95,6 +108,8 @@ main{
     }
 }
 .one--round--bluegreen{
+    width: 50%;
+    place-self: center;
     background-color: #0A846E;
     border-radius: 50%;
     grid-area: round;
@@ -103,7 +118,7 @@ main{
     justify-content: center;
 }
 .one--round--img{
-    width: auto;
+    width: 25vw;
     height: 25vh;
 }
 .one--så{
@@ -111,6 +126,7 @@ main{
     margin: 5%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     grid-area: så;
 }
 .one--h2{
@@ -118,17 +134,17 @@ main{
     font-family: sans-serif;
 }
 .one--button{
-    width: 10vw;
-    height: 7vh;
-    align-self: flex-end;
+    width: 20vw;
+    height: auto;
+    align-self: center;
     margin: 5%;
     background-color:#0A846E;
-    border-radius: 20%;
+    border-radius: 15%;
     color: white;
 }
 
 .section__two--line{
-    width: 20vw;
+    width: 50%;
     height: 1vh;
     background-color: #055647;
     margin: 5%;
@@ -142,10 +158,12 @@ main{
     "four five six"
     ". button .";
     place-items: center;
-    gap: 1rem;
+    gap: 2%;
+    overflow-y: scroll;
 }
 @media screen and (max-width:640px) {
     .section__three--cards{
+        grid-template-columns: repeat(2,1fr);
         grid-template-areas: 
         "one two"
         "three four"
@@ -154,34 +172,64 @@ main{
     }
 }
 .section__card--1{
+    width: 80%;
+    height: 80%;
     grid-area: one;
-    border: solid 1px black;
+    border: solid 1px rgb(118, 114, 114);
     padding: 2.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .section__card--2{
+    width: 80%;
+    height: 80%;
     grid-area: two;
-    border: solid 1px black;
+    border: solid 1px rgb(118, 114, 114);
     padding: 2.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .section__card--3{
+    width: 80%;
+    height: 80%;
     grid-area: three;
-    border: solid 1px black;
+    border: solid 1px rgb(118, 114, 114);
     padding: 2.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .section__card--4{
+    width: 80%;
+    height: 80%;
     grid-area: four;
-    border: solid 1px black;
+    border: solid 1px rgb(118, 114, 114);
     padding: 2.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .section__card--5{
+    width: 80%;
+    height: 80%;
     grid-area: five;
-    border: solid 1px black;
+    border: solid 1px rgb(118, 114, 114);
     padding: 2.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .section__card--6{
+    width: 80%;
+    height: 80%;
     grid-area: six;
-    border: solid 1px black;
+    border: solid 1px rgb(118, 114, 114);
     padding: 2.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .three--button{
     grid-area: button;
@@ -192,36 +240,38 @@ main{
     color: white;
 }
 .card--img{
-    width: 20vw;
-    height: 20vh;
+    width: 100%;
+    height: 50%;
 }
 .article--card{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: 
-    "h3 h3 p1 p1"
-    "p2 p2 button button";
-    gap: 5%;
+    display: flex;
+    flex-wrap: wrap;
 }
 .card--h3{
-    grid-area: h3;
-    font-size: 70%;
+    font-size: 80%;
 
 }
 .card--p{
-    grid-area: p1;
-    font-size: 70%;
+    font-size: 80%;
 }
 .card--p--opacity{
-    grid-area: p2;
     opacity: 0.8;
-    font-size: 70%;
+    font-size: 80%;
 }
 .card--button{
+    margin-left: auto;
+    margin-top: auto;
+    width: 50%;
+    height: 50%;
     grid-area: button;
     background-color: #9E5277;
     border-radius: 20%;
     color: white;
+}
+@media screen and (max-width:700px){
+    .card--button{
+        display: none;
+    }
 }
 
 .section__four{
@@ -234,6 +284,7 @@ main{
 }
 @media  screen and (max-width: 560px) {
     .section__four{
+        grid-template-columns: repeat(2,1fr);
         grid-template-areas: 
         "round round"
         "round round"
@@ -256,6 +307,8 @@ main{
  border-radius: 15%;
 }
 .four--round--bluegreen{
+    place-self: center;
+    width: 50%;
     background-color: #0A846E;
     grid-area: round;
     border-radius: 50%;
@@ -269,7 +322,8 @@ main{
 }
 
 footer{
-    height: auto;
+    width: 100%;
+    height: 40%;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-template-areas: 
@@ -282,8 +336,8 @@ footer{
 }
 @media screen and (max-width: 640px){
     footer{
+        grid-template-columns: repeat(2,1fr);
         grid-template-areas: 
-        "six six"
         "six six"
         "h3 h3"
         "five five"
@@ -291,13 +345,25 @@ footer{
     }
 }
 .section__five{
+    height: 100%;
     grid-area: five;
     padding: 5%;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-self: flex-end;
+    background-color: black;
+    opacity: 0.8;
+}
+@media screen and (max-width:640px){
+    .section__five{
+        flex-direction: column;
+        align-items: center;
+    }
 }
 .footer--h3{
+    background-color: black;
+    opacity: 0.8;
     margin-top: 5%;
     color: white;
     font-size: 400%;
@@ -309,6 +375,7 @@ footer{
 }
 .footer--p{
     color: white;
+    font-size: 70%
 }
 .section__six{
     margin-top: 5%;
@@ -317,9 +384,12 @@ footer{
     align-items: center;
     justify-content: center;
 }
+.section__six--img{
+    height: 50%;
+}
 .footer--button{
     grid-area: button;
-    padding: 3%;
+    padding: 1%;
     position: sticky;
 }
 

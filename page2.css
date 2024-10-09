@@ -1,0 +1,130 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media screen and (max-width:640px){
+    body{
+        width: 100vw;
+    }
+}
+
+nav{
+    height: auto;
+    width: 100%;
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+@media screen and (max-width:640px){
+    nav{
+        display: none;
+    }
+}
+.nav__link{
+    color: #055647;
+    text-decoration: none;
+}
+
+.header--background-hand{
+    width: 100%;
+    background-image: url(./assets/handandfield.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+
+
+.section__one{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.section__two{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.section__card--1, .section__card--2, .section__card--3{
+    width: 40%;
+    border: solid 1px rgb(118, 114, 114);
+    padding: 2.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5%;
+}
+.card--img{
+    width: 100%;
+    height: 50%;
+}
+.article--card{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card--h3{
+    font-size: 80%;
+
+}
+.card--p{
+    font-size: 80%;
+}
+.card--p--opacity{
+    opacity: 0.8;
+    font-size: 80%;
+}
+.card--button{
+    margin-left: auto;
+    margin-top: auto;
+    width: 50%;
+    height: 50%;
+    grid-area: button;
+    background-color: #9E5277;
+    border-radius: 20%;
+    color: white;
+}
+@media screen and (max-width:670px){
+    .card--button{
+        display: none;
+    }
+}
+
+footer{
+    margin-top: 20%;
+}
+
+.section__three--gallery{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color:#9E6D52;
+}
+.gallery--img{
+    width: 25vw;
+    height: auto;
+    padding: 3%;
+}
+.footer__button{
+    width: 100%;
+    height: 20%;
+}
