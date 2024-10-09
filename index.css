@@ -108,7 +108,8 @@ main{
     }
 }
 .one--round--bluegreen{
-    width: 50%;
+    height: 7rem;
+    width: 7rem;
     place-self: center;
     background-color: #0A846E;
     border-radius: 50%;
@@ -118,8 +119,8 @@ main{
     justify-content: center;
 }
 .one--round--img{
-    width: 25vw;
-    height: 25vh;
+    width: 45%;
+    height: 45%;
 }
 .one--så{
     height: auto;
@@ -138,9 +139,11 @@ main{
     height: auto;
     align-self: center;
     margin: 5%;
+    padding: 5%;
     background-color:#0A846E;
     border-radius: 15%;
     color: white;
+    border-style: none;
 }
 
 .section__two--line{
@@ -172,8 +175,8 @@ main{
     }
 }
 .section__card--1{
-    width: 80%;
-    height: 80%;
+    width: 8rem;
+    height: 12rem;
     grid-area: one;
     border: solid 1px rgb(118, 114, 114);
     padding: 2.5%;
@@ -182,8 +185,8 @@ main{
     align-items: center;
 }
 .section__card--2{
-    width: 80%;
-    height: 80%;
+    width: 8rem;
+    height: 12rem;
     grid-area: two;
     border: solid 1px rgb(118, 114, 114);
     padding: 2.5%;
@@ -192,8 +195,8 @@ main{
     align-items: center;
 }
 .section__card--3{
-    width: 80%;
-    height: 80%;
+    width: 8rem;
+    height: 12rem;
     grid-area: three;
     border: solid 1px rgb(118, 114, 114);
     padding: 2.5%;
@@ -202,8 +205,8 @@ main{
     align-items: center;
 }
 .section__card--4{
-    width: 80%;
-    height: 80%;
+    width: 8rem;
+    height: 12rem;
     grid-area: four;
     border: solid 1px rgb(118, 114, 114);
     padding: 2.5%;
@@ -212,8 +215,8 @@ main{
     align-items: center;
 }
 .section__card--5{
-    width: 80%;
-    height: 80%;
+    width: 8rem;
+    height: 12rem;
     grid-area: five;
     border: solid 1px rgb(118, 114, 114);
     padding: 2.5%;
@@ -222,8 +225,8 @@ main{
     align-items: center;
 }
 .section__card--6{
-    width: 80%;
-    height: 80%;
+    width: 8rem;
+    height: 12rem;
     grid-area: six;
     border: solid 1px rgb(118, 114, 114);
     padding: 2.5%;
@@ -238,10 +241,11 @@ main{
     padding: 3%;
     border-radius: 13%;
     color: white;
+    border-style: none;
 }
 .card--img{
-    width: 100%;
-    height: 50%;
+    width: 8rem;
+    height: 8rem;
 }
 .article--card{
     display: flex;
@@ -267,6 +271,7 @@ main{
     background-color: #9E5277;
     border-radius: 20%;
     color: white;
+    border-style: none;
 }
 @media screen and (max-width:700px){
     .card--button{
@@ -303,12 +308,14 @@ main{
  background-color: #0A846E;
  color: white;
  margin: 5%;
- padding: 3%;
+ padding: 5%;
  border-radius: 15%;
+ border-style: none;
 }
 .four--round--bluegreen{
     place-self: center;
-    width: 50%;
+    width: 7rem;
+    height: 7rem;
     background-color: #0A846E;
     grid-area: round;
     border-radius: 50%;
@@ -317,8 +324,8 @@ main{
     justify-content: center;
 }
 .four--round--img{
-    width: 25vw;
-    height: 25vh;
+    width: 45%;
+    height: 45%;
 }
 
 footer{
@@ -333,6 +340,7 @@ footer{
     background-image: url(./assets/handandfield.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 @media screen and (max-width: 640px){
     footer{
