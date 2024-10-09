@@ -267,6 +267,7 @@ main{
     margin-top: auto;
     width: 50%;
     height: 50%;
+    padding: 1.5%;
     grid-area: button;
     background-color: #9E5277;
     border-radius: 20%;
