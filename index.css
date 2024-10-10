@@ -7,7 +7,7 @@
 body{
     margin-left: auto;
     margin-right: auto;
-    width: 50vw;
+    width: 60vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -20,6 +20,7 @@ body{
 }
 
 header{
+    width: 60vw;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
@@ -28,10 +29,14 @@ header{
 }
 @media screen and (max-width: 640px) {
     header{
+        grid-template-columns: repeat(4,1fr);
         grid-template-areas: 
         "hand hand hand hand"
         "brun brun bluegreen bluegreen";
     }
+}
+.header__burgir--mobilemode{
+    display: none;
 }
 .header--hand{
     background-image: url(./assets/hand.jpeg);
@@ -49,12 +54,20 @@ header{
     grid-area: brun;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+.header--brown img{
+    height: 50%;
 }
 .header--bluegreen{
     background-color: #0A846E;
     grid-area: bluegreen;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+.header--bluegreen img{
+    height: 50%;
 }
 
 nav{
@@ -108,8 +121,8 @@ main{
     }
 }
 .one--round--bluegreen{
-    height: 7rem;
-    width: 7rem;
+    height: 10rem;
+    width: 10rem;
     place-self: center;
     background-color: #0A846E;
     border-radius: 50%;
@@ -154,6 +167,7 @@ main{
 }
 
 .section__three--cards{
+    width: 60vw;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: 
@@ -161,7 +175,7 @@ main{
     "four five six"
     ". button .";
     place-items: center;
-    gap: 2%;
+    gap: 1%;
     overflow-y: scroll;
 }
 @media screen and (max-width:640px) {
@@ -175,64 +189,82 @@ main{
     }
 }
 .section__card--1{
-    width: 8rem;
-    height: 12rem;
+    width: 10rem;
+    height: 14rem;
     grid-area: one;
     border: solid 1px rgb(118, 114, 114);
-    padding: 2.5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+   grid-template-columns: repeat(2,1fr);
+   grid-template-areas: 
+   "img img"
+   "h3 p"
+   "po btn";
+   gap: 1%;
 }
 .section__card--2{
-    width: 8rem;
-    height: 12rem;
+    width: 10rem;
+    height: 14rem;
     grid-area: two;
     border: solid 1px rgb(118, 114, 114);
-    padding: 2.5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+   grid-template-columns: repeat(2,1fr);
+   grid-template-areas: 
+   "img img"
+   "h3 p"
+   "po btn";
+   gap: 1%;
 }
 .section__card--3{
-    width: 8rem;
-    height: 12rem;
+    width: 10rem;
+    height: 14rem;
     grid-area: three;
     border: solid 1px rgb(118, 114, 114);
-    padding: 2.5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   grid-template-areas: 
+   "img img"
+   "h3 p"
+   "po btn";
+   gap: 1%;
 }
 .section__card--4{
-    width: 8rem;
-    height: 12rem;
+    width: 10rem;
+    height: 14rem;
     grid-area: four;
     border: solid 1px rgb(118, 114, 114);
-    padding: 2.5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+   grid-template-columns: repeat(2,1fr);
+   grid-template-areas: 
+   "img img"
+   "h3 p"
+   "po btn";
+   gap: 1%;
 }
 .section__card--5{
-    width: 8rem;
-    height: 12rem;
+    width: 10rem;
+    height: 14rem;
     grid-area: five;
     border: solid 1px rgb(118, 114, 114);
-    padding: 2.5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: 
+    "img img"
+    "h3 p"
+    "po btn";
+    gap: 1%;
 }
 .section__card--6{
-    width: 8rem;
-    height: 12rem;
+    width: 10rem;
+    height: 14rem;
     grid-area: six;
     border: solid 1px rgb(118, 114, 114);
-    padding: 2.5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+   grid-template-columns: repeat(2,1fr);
+   grid-template-areas: 
+   "img img"
+   "h3 p"
+   "po btn";
+   gap: 1%;
 }
 .three--button{
     grid-area: button;
@@ -244,35 +276,43 @@ main{
     border-style: none;
 }
 .card--img{
-    width: 8rem;
-    height: 8rem;
-}
-.article--card{
-    display: flex;
-    flex-wrap: wrap;
+    width: 10rem;
+    height: 10rem;
+    grid-area: img;
 }
 .card--h3{
-    font-size: 80%;
-
+    font-size: 60%;
+    grid-area: h3;
+    margin-right: auto;
+    margin-left: auto;
 }
 .card--p{
-    font-size: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 60%;
+    grid-area: p;
 }
 .card--p--opacity{
     opacity: 0.8;
-    font-size: 80%;
+    font-size: 60%;
+    grid-area: po;
+    margin-left: auto;
+    margin-right: auto;
 }
 .card--button{
-    margin-left: auto;
-    margin-top: auto;
-    width: 50%;
-    height: 50%;
+    width: 3rem;
+    height: 1rem;
+    grid-area: btn;
     padding: 1.5%;
-    grid-area: button;
     background-color: #9E5277;
     border-radius: 20%;
     color: white;
     border-style: none;
+    font-size: 5%;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
 }
 @media screen and (max-width:700px){
     .card--button{
@@ -315,8 +355,8 @@ main{
 }
 .four--round--bluegreen{
     place-self: center;
-    width: 7rem;
-    height: 7rem;
+    width: 10rem;
+    height: 10rem;
     background-color: #0A846E;
     grid-area: round;
     border-radius: 50%;
@@ -330,12 +370,12 @@ main{
 }
 
 footer{
-    width: 100%;
-    height: 40%;
+    width: 60vw;
+    height: 100%;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-template-areas: 
-    "h3 h3 six six"
+    "five five six six"
     "five five six six"
     "button button button button";
     background-image: url(./assets/handandfield.jpeg);
@@ -343,48 +383,48 @@ footer{
     background-size: cover;
     background-position: center;
 }
-@media screen and (max-width: 640px){
+@media screen and (max-width:640px){
     footer{
         grid-template-columns: repeat(2,1fr);
         grid-template-areas: 
         "six six"
-        "h3 h3"
         "five five"
         "button button";
     }
 }
 .section__five{
-    height: 100%;
+    height: 40vh;
     grid-area: five;
-    padding: 5%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-self: flex-end;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: 
+    "h3 h3"
+    "cont cont";
     background-color: black;
     opacity: 0.8;
-}
-@media screen and (max-width:640px){
-    .section__five{
-        flex-direction: column;
-        align-items: center;
-    }
 }
 .footer--h3{
     background-color: black;
     opacity: 0.8;
     margin-top: 5%;
     color: white;
-    font-size: 400%;
+    font-size: 200%;
     font-family: monospace;
     margin-top: auto;
     grid-area: h3;
     text-align: center;
-    align-self: flex-end;
 }
-.footer--p{
+.footer__contact{
+    width: 100%;
+    grid-area: cont;
+    place-self: end;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.footer__contact--p{
     color: white;
-    font-size: 70%
+    font-size: 70%;
 }
 .section__six{
     margin-top: 5%;

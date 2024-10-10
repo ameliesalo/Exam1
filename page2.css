@@ -89,44 +89,50 @@ nav{
 }
 
 .section__card--1, .section__card--2, .section__card--3{
-    width: 8rem;
-    height: 12rem;
-    border: solid 1px rgb(118, 114, 114);
-    padding: 2.5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 10rem;
+    height: 14rem;
     margin: 5%;
+    grid-area: one;
+    border: solid 1px rgb(118, 114, 114);
+    display: grid;
+   grid-template-columns: repeat(2,1fr);
+   grid-template-areas: 
+   "img img"
+   "h3 p"
+   "po btn";
 }
 .card--img{
-    width: 8rem;
+    width: 10rem;
     height: 8rem;
-}
-.article--card{
-    display: flex;
-    flex-wrap: wrap;
+    grid-area: img;
 }
 .card--h3{
     font-size: 80%;
-
+    grid-area: h3;
 }
 .card--p{
     font-size: 80%;
+    grid-area: p;
 }
 .card--p--opacity{
+    grid-area: po;
     opacity: 0.8;
     font-size: 80%;
 }
 .card--button{
-    margin-left: auto;
-    margin-top: auto;
-    width: 50%;
-    height: 50%;
-    grid-area: button;
+    width: 3rem;
+    height: 1rem;
+    grid-area: btn;
+    padding: 1.5%;
     background-color: #9E5277;
     border-radius: 20%;
     color: white;
     border-style: none;
+    font-size: 5%;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
 }
 @media screen and (max-width:670px){
     .card--button{
@@ -136,20 +142,49 @@ nav{
 
 footer{
     margin-top: 20%;
+    width: 60vw;
 }
 
 .section__three--gallery{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
     width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas: 
+    "one two three four";
     background-color:#9E6D52;
+    justify-items: center;
 }
-.gallery--img{
-    width: 9rem;
-    height: 9rem;
-    padding: 3%;
+@media screen and (max-width:850px){
+    .section__three--gallery{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas: 
+        "one two"
+        "three four";
+    }
+}
+.gallery--img-1{
+    grid-area: one;
+    width: 8rem;
+    height: 8rem;
+    padding: 5%;
+}
+.gallery--img-2{
+    grid-area: two;
+    width: 8rem;
+    height: 8rem;
+    padding: 5%;
+}
+.gallery--img-3{
+    grid-area: three;
+    width: 8rem;
+    height: 8rem;
+    padding: 5%;
+}
+.gallery--img-4{
+    grid-area: four;
+    width: 8rem;
+    height: 8rem;
+    padding: 5%;
 }
 .footer__button{
     width: 100%;
