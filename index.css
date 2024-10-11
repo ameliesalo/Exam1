@@ -31,12 +31,20 @@ header{
     header{
         grid-template-columns: repeat(4,1fr);
         grid-template-areas: 
+        ". . burgir ."
         "hand hand hand hand"
         "brun brun bluegreen bluegreen";
     }
 }
 .header__burgir--mobilemode{
     display: none;
+    width: 5vw;
+}
+@media screen and (max-width:640px){
+    .header__burgir--mobilemode{
+        display: grid;
+        grid-area: burgir;
+    }
 }
 .header--hand{
     background-image: url(./assets/hand.jpeg);
@@ -201,6 +209,14 @@ main{
    "po btn";
    gap: 1%;
 }
+@media screen and (max-width:670px){
+    .section__card--1{
+        grid-template-areas: 
+        "img img"
+        "h3 p"
+        "po delete";
+    }
+}
 .section__card--2{
     width: 10rem;
     height: 14rem;
@@ -213,6 +229,14 @@ main{
    "h3 p"
    "po btn";
    gap: 1%;
+}
+@media screen and (max-width:670px){
+    .section__card--2{
+        grid-template-areas: 
+        "img img"
+        "h3 p"
+        "po delete";
+    }
 }
 .section__card--3{
     width: 10rem;
@@ -227,6 +251,14 @@ main{
    "po btn";
    gap: 1%;
 }
+@media screen and (max-width:670px){
+    .section__card--3{
+        grid-template-areas: 
+        "img img"
+        "h3 p"
+        "po delete";
+    }
+}
 .section__card--4{
     width: 10rem;
     height: 14rem;
@@ -239,6 +271,14 @@ main{
    "h3 p"
    "po btn";
    gap: 1%;
+}
+@media screen and (max-width:670px){
+    .section__card--4{
+        grid-template-areas: 
+        "img img"
+        "h3 p"
+        "po delete";
+    }
 }
 .section__card--5{
     width: 10rem;
@@ -253,6 +293,14 @@ main{
     "po btn";
     gap: 1%;
 }
+@media screen and (max-width:670px){
+    .section__card--5{
+        grid-template-areas: 
+        "img img"
+        "h3 p"
+        "po delete";
+    }
+}
 .section__card--6{
     width: 10rem;
     height: 14rem;
@@ -265,6 +313,14 @@ main{
    "h3 p"
    "po btn";
    gap: 1%;
+}
+@media screen and (max-width:670px){
+    .section__card--6{
+        grid-template-areas: 
+        "img img"
+        "h3 p"
+        "po delete";
+    }
 }
 .three--button{
     grid-area: button;
@@ -314,9 +370,20 @@ main{
     margin-right: auto;
     margin-bottom: auto;
 }
-@media screen and (max-width:700px){
+@media screen and (max-width:670px){
     .card--button{
         display: none;
+    }
+}
+.delete{
+    display: none;
+}
+@media screen and(max-width:670px){
+    .delete{
+        display: grid;
+        grid-area: delete;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 

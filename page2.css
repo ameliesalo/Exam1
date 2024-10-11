@@ -49,6 +49,15 @@ nav{
     color: white;
     margin-bottom: 5%;
 }
+.header__burgir--mobilemode{
+    display: none;
+}
+@media screen and (max-width:640px){
+    .header__burgir--mobilemode{
+        display: flex;
+        align-self: flex-end;
+    }
+}
 .header__img{
     width: 30%;
     padding: 5%;
@@ -101,6 +110,14 @@ nav{
    "h3 p"
    "po btn";
 }
+@media screen and (max-width:670px){
+    .section__card--1, .section__card--2, .section__card--3{
+        grid-template-areas: 
+        "img img"
+        "h3 p"
+        "po delete";
+    }
+}
 .card--img{
     width: 10rem;
     height: 8rem;
@@ -139,7 +156,17 @@ nav{
         display: none;
     }
 }
-
+.delete{
+    display: none;
+}
+@media screen and (max-width:670px){
+    .delete{
+        display: grid;
+        grid-area: delete;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 footer{
     margin-top: 20%;
     width: 60vw;
