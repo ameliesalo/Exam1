@@ -378,7 +378,7 @@ main{
 .delete{
     display: none;
 }
-@media screen and(max-width:670px){
+@media screen and (max-width:670px){
     .delete{
         display: grid;
         grid-area: delete;
