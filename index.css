@@ -49,7 +49,7 @@ header{
 .header--hand{
     background-image: url(./assets/hand.jpeg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     height: auto;
     grid-area: hand;
@@ -162,7 +162,7 @@ main{
     margin: 5%;
     padding: 5%;
     background-color:#0A846E;
-    border-radius: 15%;
+    border-radius: 3rem;
     color: white;
     border-style: none;
 }
@@ -184,7 +184,6 @@ main{
     ". button .";
     place-items: center;
     gap: 1%;
-    overflow-y: scroll;
 }
 @media screen and (max-width:640px) {
     .section__three--cards{
@@ -207,7 +206,6 @@ main{
    "img img"
    "h3 p"
    "po btn";
-   gap: 1%;
 }
 @media screen and (max-width:670px){
     .section__card--1{
@@ -228,7 +226,6 @@ main{
    "img img"
    "h3 p"
    "po btn";
-   gap: 1%;
 }
 @media screen and (max-width:670px){
     .section__card--2{
@@ -249,7 +246,6 @@ main{
    "img img"
    "h3 p"
    "po btn";
-   gap: 1%;
 }
 @media screen and (max-width:670px){
     .section__card--3{
@@ -270,7 +266,6 @@ main{
    "img img"
    "h3 p"
    "po btn";
-   gap: 1%;
 }
 @media screen and (max-width:670px){
     .section__card--4{
@@ -291,7 +286,6 @@ main{
     "img img"
     "h3 p"
     "po btn";
-    gap: 1%;
 }
 @media screen and (max-width:670px){
     .section__card--5{
@@ -312,7 +306,6 @@ main{
    "img img"
    "h3 p"
    "po btn";
-   gap: 1%;
 }
 @media screen and (max-width:670px){
     .section__card--6{
@@ -327,7 +320,7 @@ main{
     background-color: #0A846E;
     margin: 5%;
     padding: 3%;
-    border-radius: 13%;
+    border-radius: 3rem;
     color: white;
     border-style: none;
 }
@@ -361,7 +354,7 @@ main{
     grid-area: btn;
     padding: 1.5%;
     background-color: #9E5277;
-    border-radius: 20%;
+    border-radius: 3rem;
     color: white;
     border-style: none;
     font-size: 5%;
@@ -417,7 +410,7 @@ main{
  color: white;
  margin: 5%;
  padding: 5%;
- border-radius: 15%;
+ border-radius: 3rem;
  border-style: none;
 }
 .four--round--bluegreen{
